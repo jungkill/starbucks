@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 	//Code to center the subscription pup-up box
@@ -26,5 +25,54 @@ $(document).ready(function(){
 		return false;
 	});
 
+
+	//비디오 컨트롤
+	// 비디오 객체 가져오기
+	var player=$('video')[0];
+	console.log(player);
+
+	// 재생/일시정지
+	$('#btn-play-pause').click(function(e){
+		e.preventDefault();
+		if(player.paused){
+			player.play();
+			$(this).find('i').text('pause');
+		}else{
+			player.pause();
+			$(this).find('i').text('play_arrow');
+		}
+	});
+
+	// 다시 시작
+	$('#btn-replay').click(function (e) { 
+		e.preventDefault();
+		player.currentTime=0; 
+		player.play();
+		$('#btn-play-pause i').text('pause');
+	});
+
+	// 음소거/해제
+	$('#btn-volume').click(function(e){
+		e.preventDefault();
+		if(player.muted){
+			player.muted=false;
+			$(this).find('i').text('volume_up');
+		}else{
+			player.muted=true;
+			$(this).find('i').text('volume_off');
+		}
+	});
+
+	// 전체화면/기본화면
+	$('#btn-fullscreen').click(function(e){
+		e.preventDefault();
+		if($(this).text()=='fullscreen'){
+			$('body').addClass('fullscreen');
+			$(this).find('i').text('fullscreen_exit')
+		}else{
+			$('body').removeClass('fullscreen');
+			$(this).find('i').text('fullscreen')
+		}
+	});
 
 });

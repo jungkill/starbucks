@@ -1,219 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<title>Minima |  Clean, Minimal Free HTML5 template</title>
+	<title>Starbucks</title>
 	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Minima is a minimal, clean HTML5 multi-purpose template, well-coded & commented code"/>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	
-
-
-
-	<script>
-		$(function(){
-		   // 비디오, 오디오 제어하기 https://www.w3schools.com/tags/ref_av_dom.asp
-  
-		   // 비디오 객체 가져오기 
-		   var player=$('video')[0];
-		   // var player=document.getElementById('video');
-		   console.log(player);
-		   
-		   //재생/일시정지 
-		   $('#btn-play-pause').click(function (e) { 
-			  e.preventDefault();
-			  if(player.paused){//일시정지 상태이면
-				 player.play();
-				 $(this).find('i').text('pause');
-			  }else{//재생상태이면
-				 player.pause();
-				 $(this).find('i').text('play_arrow');
-			  }
-		   });
-  
-		   //다시시작 
-		   $('#btn-replay').click(function (e) { 
-			  e.preventDefault();
-			  player.currentTime=0;//시간을 0으로 초기화 
-			  player.play();
-			  $('#btn-play-pause i').text('pause');
-		   });
-  
-		   //음소거/해제 
-		   $('#btn-volume').click(function (e) { 
-			  e.preventDefault();
-			  if(player.muted){//음소거 상태면               
-				 player.muted=false;//음소거 상태를 해제
-				 $(this).find('i').text('volume_up');
-			  }else{//음소거가 아니면
-				 player.muted=true;//음소거 상태를 활성화
-				 $(this).find('i').text('volume_off');
-			  }
-		   });
-  
-		   //전체화면/기본화면 
-		   $('#btn-fullscreen').click(function (e) { 
-			  e.preventDefault();
-			  if($(this).text()=='fullscreen'){//아이콘이 풀스크린이면
-				 $('body').addClass('fullscreen');
-				 $(this).find('i').text('fullscreen_exit');
-			  }else{
-				 $('body').removeClass('fullscreen');
-				 $(this).find('i').text('fullscreen');
-			  }
-		   });
-  
-		})
-	 </script>
-
-
-
-
-
+	<meta name="author" content="hanna">
+	<meta name="description" content="starbuck site, drink, product"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">		
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
-
 	<header>
-
 		<div class="wrapper">
 			<h1>
-				<a href="#"> 
-					<img src="img/logo_star.png" alt="starbucks"> 
+				<a href="#"> 					
+					<img src="img/logo.png" alt="starbucks"> 
 				</a>
 			</h1>
 			<nav>
 				<ul>
-					<li><a href="">COFFEE</a></li>
-					<li><a href="">MENU</a></li>
-					<li><a href="">STORE</a></li>
-					<li><a href="">RESPONSIBILITY</a></li>
-					<li><a href="">MY STARBUCKS REWARDS</a></li>
-					<li><a href="">WHAT'S NEW</a></li>
+					<li><a href="#">COFFEE</a></li>
+					<li><a href="#">MENU</a></li>
+					<li><a href="#">STORE</a></li>
+					<li><a href="#">RESPONSIBILITY</a></li>
+					<li><a href="#">MY STARBUCKS REWARDS</a></li>
+					<li><a href="#">WHAT'S NEW</a></li>
 				</ul>
 			</nav>
 		</div>
-
 	</header><!-- End Header -->
 
+
 	<section class="billboard">
-		<section class="caption">
-			<p class="cap_title">Introducing the Starbucks<br>Rewards™ Visa® Card</p>
-			<p class="cap_desc">Enjoy more of what you love. Earn Stars — that add up to food and drink<br>Rewards — everywhere you make purchases.</p>
-			<a href="#">LEARN MORE <i></i></a>
-		</section>
+		<h2 class="blind">Starbucks Rewards</h2>
+		<div class="wrapper">
+			<div class="caption">
+				<div class="text">
+					<p class="cap_title">
+						Introducing the Starbucks<br>Rewards™ Visa® Card
+					</p>
+					<p class="cap_desc">
+						Enjoy more of what you love. Earn Stars — that add up to food and drink<br>
+						Rewards — everywhere you make purchases.
+					</p>
+				</div>
+				<a href="#">LEARN MORE <i></i></a>
+			</div>
+		</div>
 	</section><!-- End billboard -->
 
-	<!-- <section class="services wrapper">
-		<ul>
-			<li>
-				<img class="s_icons" src="img/s1_icon.png" title="" alt=""/>
-				<h3>Duis aute irure</h3>
-				<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>
-			</li>
-			<li>
-				<img class="s_icons" src="img/s2_icon.png" title="" alt=""/>
-				<h3>Duis aute irure</h3>
-				<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>
-			</li>
-			<li>
-				<img class="s_icons" src="img/s3_icon.png" title="" alt=""/>
-				<h3>Duis aute irure</h3>
-				<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>
-			</li>
-		</ul>
-	</section> -->
-	<!-- End services -->
-
-
-	<!-- <section class="video wrapper">
-		
-		
-		
-		
-		
-		<h3>STARBUCKS RESERVE</h3>
-		<p>세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한 스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.</p>
+	<section class="video wrapper">
+		<h2>STARBUCKS RESERVE</h2>
+		<p>
+			세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한<br>
+			스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.
+		</p>
 		<div class="ex_video">
-			<iframe width="686px" height="386px" src="img/starbuck_reserve.mp4" frameborder="0"></iframe> -->
-			<!-- <a href="#"><img width="686px" height="auto" src="img/starbuck_reserve.mp4" alt="" title=""/></a> -->
-		<!-- </div>
-	</section>	End video -->
+         <div class="wrap">
+            <video src="starbuck_reserve.mp4" id="video"></video>
+         </div>
+         <!-- 동영상 컨트롤러 -->
+         <div class="control">
+            <button id="btn-play-pause"><i class="material-icons">play_arrow</i></button>
+            <button id="btn-replay"><i class="material-icons">replay</i></button>
+            <button id="btn-volume"><i class="material-icons">volume_up</i></button>
+            <button id="btn-fullscreen"><i class="material-icons">fullscreen</i></button>
+         </div>
+      </div>
+	</section>	<!-- End video -->
 
-
-
-
-	<div class="center">
-		<h3>STARBUCKS RESERVE</h3>
-		<p>세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한 스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.</p>
-		<div class="video">
-		   <div class="wrap">
-			  <video src="img/starbuck_reserve.mp4" id="video"></video>
-		   </div>
-		   <!-- 동영상 컨트롤러 -->
-		   <div class="control">
-			  <button id="btn-play-pause"><i class="material-icons">play_arrow</i></button>
-			  <button id="btn-replay"><i class="material-icons">replay</i></button>
-			  <button id="btn-volume"><i class="material-icons">volume_up</i></button>
-			  <button id="btn-fullscreen"><i class="material-icons">fullscreen</i></button>
-		   </div>
+	<section class="new_drink wrapper">
+		<h2 class="S_title">New Drink</h2>
+		<div class="drink">
+			<a href="#" class="drink_img">				
+				<img src="img/coffee1.jpg" alt="">
+				<div class="drink_title">
+					Nitro Cold Brew <i></i>
+				</div>
+			</a>			
 		</div>
-	 </div>
-
-
-
-
-
-
-
-	<section class="recent_work wrapper">
-		<h3 class="S_title">New Drink</h3>
-
-		<div class="work">
-			<a href="#" class="work_img">
-				<img src="img/coffee1.jpg" alt="" title=""/>
-			</a>
-			<a href="#" class="work_title">
-				Nitro Cold Brew
-				<i></i>
+		<div class="drink">
+			<a href="#" class="drink_img">
+				<img src="img/coffee2.jpg" alt="">
+				<div class="drink_title">
+					Vanilla Cream Cold Brew <i></i>
+				</div>
 			</a>
 		</div>
-		<div class="work">
-			<a href="#" class="work_img">
-				<img src="img/coffee2.jpg" alt="" title=""/>
-			</a>
-			<a href="#" class="work_title">
-				Vanilla Cream Cold Brew
-				<i></i>
-			</a>
-		</div>
-		<div class="work">
-			<a href="#" class="work_img">
-				<img src="img/coffee3.jpg" alt="" title=""/>
-			</a>
-			<a href="#" class="work_title">
-				Cold Brew
-				<i></i>
+		<div class="drink">
+			<a href="#" class="drink_img">
+				<img src="img/coffee3.jpg" alt="">
+				<div class="drink_title">
+					Cold Brew <i></i>
+				</div>
 			</a>
 		</div>
-		<div class="work">
-			<a href="#" class="work_img">
-				<img src="img/coffee4.jpg" alt="" title=""/>
-			</a>
-			<a href="#" class="work_title">
-				Cold Brew Latte
-				<i></i>
+		<div class="drink">
+			<a href="#" class="drink_img">
+				<img src="img/coffee4.jpg" alt="">
+				<div class="drink_title">
+					Cold Brew Latte <i></i>
+				</div>
 			</a>
 		</div>
-	</section><!-- End recent_work -->
-
-
+	</section><!-- End new_drink -->
 
 	<section class="subscription">
+		<h2 class="blind">스타벅스 가입</h2>
 		<div class="wrapper">
 			<p class="title">스타벅스에 가입하세요.</p>
 			<p class="desc">가입을 통해 리워드 혜택을 즐세요.</p>
@@ -221,16 +116,13 @@
 		</div>
 	</section><!-- End subscription -->
 
-
-
 	<section class="social">
-			<a href="http://facebook.com/pixelhint" target="_blank" class="fb"></a>
-			<a href="http://twitter.com/pixelhint" target="_blank" class="t"></a>
-			<a href="http://dribbble.com/pixelhint" target="_blank" class="d"></a>
-			<a href="#" target="_blank" class="g"></a>
+		<h2 class="blind">스타벅스 소셜</h2>
+		<a href="http://facebook.com/pixelhint" target="_blank" class="fb"><span class="blind">facebook</span></a>
+		<a href="http://twitter.com/pixelhint" target="_blank" class="t"><span class="blind">twitter</span></a>
+		<a href="http://dribbble.com/pixelhint" target="_blank" class="d"><span class="blind">dribbble</span></a>
+		<a href="#" target="_blank" class="g"><span class="blind">google blog</span></a>
 	</section><!-- End social -->
-
-
 
 	<footer>
 		<p>사업자등록번호 201-81-21515 (주)스타벅스커피 코리아 대표이사 이석구 TEL : 02) 3015-1100 / FAX : 02) 3015-1106 개인정보 책임자 : 강기원</p>
@@ -239,13 +131,14 @@
 
 	<div id="lightbox"></div>
 	<div id="box">
-		<a href="" class="close"></a>
-		<form method="" action="">
-			<input type="text" id="email" placeholder="Email"/>
-			<input type="text" id="name" placeholder="Name"/>
-			<input type="submit" id="submit" value="SIGN IN"/>
+		<a href="#" class="close">
+			<span class="blind">닫기</span>
+		</a>
+		<form action="#" method="post">
+			<input type="text" id="email" placeholder="Email" title="email">
+			<input type="text" id="name" placeholder="Name" title="name">
+			<input type="submit" id="submit" value="Sign In">
 			<a href="#">JOIN NOW</a>
-			
 		</form>
 	</div>
 </body>
